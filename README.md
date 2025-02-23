@@ -4,14 +4,23 @@
 **Academic Records Profiler** is a **C++ console-based application** that processes, organizes, and analyzes academic records of students from multiple campuses. The project profiles student registration details and generates summarized reports.
 
 ## Features
-- Processes student records from **Peshawar** and **Lahore** campuses.
-- Reads student registration and details from `.txt` files.
-- Generates comprehensive reports, including:
-  - `AllDetails.txt`: Combined details of all students.
-  - `AllStudents.txt`: A summarized student list.
-  - `malenames.txt` & `femalenames.txt`: Gender-based student categorization.
-- Automated profiling upon execution.
-- Simple console-based interaction.
+### **Data Profiling:**
+- Analyzes and processes student records from **Peshawar** and **Lahore** campuses.
+- Calculates the number of unique student IDs and verifies their consistency.
+- Computes statistics such as total students, male vs. female students, and total courses.
+- Determines the average number of students per semester and per batch.
+
+### **Data Cleansing:**
+- Standardizes names for students and their fathers.
+- Extracts and standardizes city names from addresses.
+- Adds missing gender information using name-based lookup.
+- Ensures date validation for DOB and registration dates.
+- Normalizes gender representation to **'M'** and **'F'**.
+
+### **Anomalies Detection:**
+- Identifies invalid marks (outside the range of 0 to 100).
+- Detects invalid dates (e.g., 31st February, DOB greater than registration date).
+- Flags missing degree information and addresses inconsistencies.
 
 ## Folder Structure
 ```plaintext
@@ -53,8 +62,8 @@ This will automatically generate `AllDetails.txt`, `AllStudents.txt`, `malenames
 - **Peshawar Folder**: Contains all student details from Peshawar.
 - **Lahore Folder**: Contains all student details from Lahore.
 - **main.cpp**: The main C++ program that processes the records.
-- **AllDetails.txt**: Created upon execution, stores combined student details.
-- **AllStudents.txt**: Created upon execution, stores summarized student records.
+- **AllDetails.txt**: Created upon execution, stores combined course details.
+- **AllStudents.txt**: Created upon execution, stores summarized student details.
 - **malenames.txt & femalenames.txt**: Extracted from the provided data.
 
 ## Contributing
@@ -65,6 +74,6 @@ This will automatically generate `AllDetails.txt`, `AllStudents.txt`, `malenames
 5. Create a Pull Request.
 
 ## Author
-**Abdul Mueed Khan**
+**Abdul Mueed Khan**  
 [GitHub Profile](https://github.com/amueedk)
 
