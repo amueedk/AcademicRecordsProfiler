@@ -5,7 +5,7 @@
 
 ## Features
 ### **Data Profiling:**
-- Analyzes and processes studentand records from **Peshawar** and **Lahore** campuses.
+- Analyzes and processes students and courses records from **Peshawar** and **Lahore** campuses.
 - Calculates the number of unique student IDs and verifies their consistency.
 - Computes statistics such as total students, male vs. female students, and total courses.
 - Determines the average number of students per semester and per batch.
@@ -26,13 +26,13 @@
 ```plaintext
 AcademicRecordsProfiler/
 │── Peshawar/                # Contains all Peshawar-related records
-│   ├── BS_P_94_Reg.txt
-│   ├── BS_P_94_Student.txt
+│   ├── BS_P_94_Reg.txt      # For course records
+│   ├── BS_P_94_Student.txt  # For student records
 │   ├── ...
 │
 │── Lahore/                  # Contains all Lahore-related records
-│   ├── Lhr_Student_94.txt
-│   ├── Lhr_Detail_94.txt
+│   ├── Lhr_Student_94.txt   # For student records
+│   ├── Lhr_Detail_94.txt    # For course records
 │   ├── ...
 │
 │── main.cpp                 # The main C++ program
