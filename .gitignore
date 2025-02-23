@@ -1,3 +1,7 @@
 *.exe
 *.log
 *.tmp
+AllDetails.txt
+AllStudents.txt
+malenames.txt
+femalenames.txt
