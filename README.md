@@ -5,7 +5,7 @@
 
 ## Features
 ### **Data Profiling:**
-- Analyzes and processes student records from **Peshawar** and **Lahore** campuses.
+- Analyzes and processes studentand records from **Peshawar** and **Lahore** campuses.
 - Calculates the number of unique student IDs and verifies their consistency.
 - Computes statistics such as total students, male vs. female students, and total courses.
 - Determines the average number of students per semester and per batch.
