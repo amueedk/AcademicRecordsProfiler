@@ -19,7 +19,7 @@
 
 ### **Anomalies Detection:**
 - Identifies invalid marks (outside the range of 0 to 100).
-- Detects invalid dates (e.g., 31st February, DOB greater than registration date).
+- Detects invalid dates 
 - Flags missing degree information and addresses inconsistencies.
 
 ## Folder Structure
