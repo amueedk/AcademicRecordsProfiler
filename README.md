@@ -70,10 +70,6 @@ g++ app.cpp -o app `pkg-config --cflags --libs Qt5Widgets`
 
 #### **For GUI Version**
 ```sh
-./app
-```
-Or, if using the Python-based UI:
-```sh
 python app.py
 ```
 
