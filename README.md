@@ -1,7 +1,7 @@
 # Academic Records Profiler
 
 ## Overview
-**Academic Records Profiler** is a **C++ console-based application** that processes, organizes, and analyzes academic records of students from multiple campuses. The project profiles student registration details and generates summarized reports.
+**Academic Records Profiler** is a **C++ console-based application** that processes, organizes, and analyzes academic records of students from multiple campuses. The project profiles student and course details and generates summarized reports.
 
 Originally, `main.cpp` was created as part of my **Object-Oriented Programming (OOP) project**, focusing on academic record processing. Later, I integrated a **Qt-based GUI (`app.cpp` and `app.py`)** to enhance usability and interaction.
 
