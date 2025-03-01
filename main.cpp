@@ -285,7 +285,6 @@ void loadStudents(const string fileNames[], int fileCount, vector<Student>& Sdat
             string field;
             vector<string> fields;
 
-            // ✅ Manually split line by commas
             for (char b : line) {
                 if (b == ',') {
                     fields.push_back(field);
@@ -728,7 +727,7 @@ int main() {
         "Peshawar/BS_P_97_Reg.txt", "Peshawar/BS_P_98_Reg.txt",
         "Peshawar/BS_P_99_Reg.txt", "Peshawar/BS_P_100_Reg.txt", "Peshawar/BS_P_101_Reg.txt", "Peshawar/BS_P_102_Reg.txt",
         "Peshawar/BS_P_103_Reg.txt","Peshawar/BS_P_104_Reg.txt",
-        "Peshawar/MS_P_101_Reg.txt", "Peshawar/MS_P_102_Reg.txt", "Peshawar/MS_P_103_Reg.txt", "MS_P_104_Reg.txt"
+        "Peshawar/MS_P_101_Reg.txt", "Peshawar/MS_P_102_Reg.txt", "Peshawar/MS_P_103_Reg.txt", "Peshawar/MS_P_104_Reg.txt"
     };
 
     vector<Course> PCdata;

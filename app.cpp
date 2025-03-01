@@ -284,8 +284,6 @@ void loadStudents(const string fileNames[], int fileCount, vector<Student>& Sdat
         while (getline(in, line)) {
             string field;
             vector<string> fields;
-
-            // ✅ Manually split line by commas
             for (char b : line) {
                 if (b == ',') {
                     fields.push_back(field);
@@ -709,15 +707,21 @@ string PDetailfile_names[] = {
 "Peshawar/BS_P_97_Reg.txt", "Peshawar/BS_P_98_Reg.txt",
 "Peshawar/BS_P_99_Reg.txt", "Peshawar/BS_P_100_Reg.txt", "Peshawar/BS_P_101_Reg.txt", "Peshawar/BS_P_102_Reg.txt",
 "Peshawar/BS_P_103_Reg.txt", "Peshawar/BS_P_104_Reg.txt",
-"Peshawar/MS_P_101_Reg.txt", "Peshawar/MS_P_102_Reg.txt", "Peshawar/MS_P_103_Reg.txt", "MS_P_104_Reg.txt"
+"Peshawar/MS_P_101_Reg.txt", "Peshawar/MS_P_102_Reg.txt", "Peshawar/MS_P_103_Reg.txt", "Peshawar/MS_P_104_Reg.txt"
 };
 loadCourses(PDetailfile_names, 15, PCdata, true);
 
-// Load Combined Data
+// Write unified student & course data into files
+string allStudentFile = "AllStudents.txt";
+string allCourseFile = "AllDetails.txt";
+writeUnifiedStudentFile(LSdata, PSdata, allStudentFile);
+writeUnifiedCourseFile(LCdata, PCdata, allCourseFile);
+
+// Load unified (combined) student & course data from files
 vector<Student> ASdata;
 vector<Course> ACdata;
-loadStudents("AllStudents.txt", ASdata);
-loadCourses("AllDetails.txt", ACdata);
+loadStudents(allStudentFile, ASdata);  // Load combined student data
+loadCourses(allCourseFile, ACdata);    // Load combined course data
 
 // Call displayStatistics() with correct parameters
 displayStatistics(option, LSdata, LCdata, PSdata, PCdata, ASdata, ACdata);
