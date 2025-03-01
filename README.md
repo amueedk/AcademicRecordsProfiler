@@ -38,47 +38,66 @@ AcademicRecordsProfiler/
 │   ├── ...
 │
 │── main.cpp                 # Console-based C++ program (initial OOP project)
-│── app.cpp                  # Qt-based GUI version (C++)
-│── app.py                   # GUI controller (Python - PyQt5)
+│── app.cpp                  # C++ backened for the GUI application
+│── app.py                   # Python controller for the GUI
+│── statistics.ui            # Qt Designer file
+│── ui_statistics.py         # PyQt5-generated GUI layout
 │── README.md                # Documentation
 ```
 
 ## Installation & Usage
+
 ### **Step 1: Clone the Repository**
 ```sh
 git clone https://github.com/amueedk/AcademicRecordsProfiler.git
 cd AcademicRecordsProfiler
 ```
 
-### **Step 2: Compile the C++ Program**
-#### **For Console Version (`main.cpp`)**
-Use any C++ compiler (e.g., g++):
+---
+
+## **Console-Based Version**
+
+### **Step 2: Compile the Console Application (`main.cpp`)**  
+Use any C++ compiler (e.g., g++):  
 ```sh
 g++ main.cpp -o AcademicRecordsProfiler
 ```
 
-#### **For GUI Version (`app.cpp`)**
-```sh
-g++ app.cpp -o app `pkg-config --cflags --libs Qt5Widgets`
-```
-
-### **Step 3: Run the Program**
-#### **For Console Version**
+### **Step 3: Run the Console Application**  
 ```sh
 ./AcademicRecordsProfiler
 ```
 
-#### **For GUI Version**
+---
+
+## **GUI-Based Version**
+
+### **Step 2: Compile the GUI Backend (`app.cpp`)**  
+```sh
+g++ app.cpp -o app
+```
+
+### **Step 3: Install Python Dependencies**  
+Ensure you have Python installed, then install PyQt5 if not already installed:  
+```sh
+pip install PyQt5
+```
+
+### **Step 4: Run the GUI Application**  
 ```sh
 python app.py
 ```
+
+---
 
 ## File Details
 - **Peshawar Folder**: Contains all student details from Peshawar.
 - **Lahore Folder**: Contains all student details from Lahore.
 - **main.cpp**: The original C++ console application.
-- **app.cpp**: The GUI version of the application using Qt.
-- **app.py**: The Python controller for the GUI (PyQt5).
+- **app.cpp**: The C++ backend for the GUI application, used by app.py to process data and return results.
+- **app.py**: The main Python controller for the GUI, managing user interactions and executing the C++ backend asynchronously (PyQt5).
+- **statistics.ui**: Qt Designer file for interface. 
+- **ui_statistics.py**: The PyQt5-generated GUI layout for the application, handling user interface elements and styling.
 - **AllDetails.txt**: Created upon execution, stores combined course details.
 - **AllStudents.txt**: Created upon execution, stores summarized student details.
 - **malenames.txt & femalenames.txt**: Extracted from the provided data.
