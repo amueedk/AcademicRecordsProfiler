@@ -3,6 +3,8 @@
 ## Overview
 **Academic Records Profiler** is a **C++ console-based application** that processes, organizes, and analyzes academic records of students from multiple campuses. The project profiles student registration details and generates summarized reports.
 
+Originally, `main.cpp` was created as part of my **Object-Oriented Programming (OOP) project**, focusing on academic record processing. Later, I integrated a **Qt-based GUI (`app.cpp` and `app.py`)** to enhance usability and interaction.
+
 ## Features
 ### **Data Profiling:**
 - Analyzes and processes students and courses records from **Peshawar** and **Lahore** campuses.
@@ -19,7 +21,7 @@
 
 ### **Anomalies Detection:**
 - Identifies invalid marks (outside the range of 0 to 100).
-- Detects invalid dates 
+- Detects invalid dates.
 - Flags missing degree information and addresses inconsistencies.
 
 ## Folder Structure
@@ -35,7 +37,9 @@ AcademicRecordsProfiler/
 │   ├── Lhr_Detail_94.txt    # For course records
 │   ├── ...
 │
-│── main.cpp                 # The main C++ program
+│── main.cpp                 # Console-based C++ program (initial OOP project)
+│── app.cpp                  # Qt-based GUI version (C++)
+│── app.py                   # GUI controller (Python - PyQt5)
 │── README.md                # Documentation
 ```
 
@@ -47,21 +51,38 @@ cd AcademicRecordsProfiler
 ```
 
 ### **Step 2: Compile the C++ Program**
+#### **For Console Version (`main.cpp`)**
 Use any C++ compiler (e.g., g++):
 ```sh
 g++ main.cpp -o AcademicRecordsProfiler
 ```
 
+#### **For GUI Version (`app.cpp`)**
+```sh
+g++ app.cpp -o app `pkg-config --cflags --libs Qt5Widgets`
+```
+
 ### **Step 3: Run the Program**
+#### **For Console Version**
 ```sh
 ./AcademicRecordsProfiler
 ```
-This will automatically generate `AllDetails.txt`, `AllStudents.txt`, `malenames.txt`, and `femalenames.txt` based on the data files.
+
+#### **For GUI Version**
+```sh
+./app
+```
+Or, if using the Python-based UI:
+```sh
+python app.py
+```
 
 ## File Details
 - **Peshawar Folder**: Contains all student details from Peshawar.
 - **Lahore Folder**: Contains all student details from Lahore.
-- **main.cpp**: The main C++ program that processes the records.
+- **main.cpp**: The original C++ console application.
+- **app.cpp**: The GUI version of the application using Qt.
+- **app.py**: The Python controller for the GUI (PyQt5).
 - **AllDetails.txt**: Created upon execution, stores combined course details.
 - **AllStudents.txt**: Created upon execution, stores summarized student details.
 - **malenames.txt & femalenames.txt**: Extracted from the provided data.
